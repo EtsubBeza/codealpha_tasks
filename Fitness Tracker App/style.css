@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f0f4f8;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2d3436;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* 🌟 Stylish Button */
+button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Summary section */
+.summary {
+  margin-bottom: 2rem;
+}
+
+.progress {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #00b894;
+  border-radius: 10px;
+}
+
+span {
+  font-weight: 500;
+  margin-left: 5px;
+  color: #444;
+}
+
+/* Log */
+#log-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#log-list li {
+  padding: 0.6rem;
+  background: #f7f9fc;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}

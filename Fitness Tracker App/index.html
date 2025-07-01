@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF- />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fitness Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏃 Fitness Tracker</h1>
+
+    <form id="fitness-form">
+      <input type="date" id="date" required />
+      <input type="number" id="steps" placeholder="Steps taken" required />
+      <input type="text" id="workout" placeholder="Workout type (e.g., Running)" required />
+      <input type="number" id="duration" placeholder="Duration (minutes)" required />
+      <input type="number" id="calories" placeholder="Calories burned" required />
+      <button type="submit" class="btn-primary">Add Entry</button>
+    </form>
+
+    <h2>📊 Daily Summary</h2>
+    <div class="summary">
+      <div class="progress">
+        <label>Steps</label>
+        <progress id="steps-bar" max="10000" value="0"></progress>
+        <span id="steps-count">0</span>/10000
+      </div>
+
+      <div class="progress">
+        <label>Calories</label>
+        <progress id="calories-bar" max="3000" value="0"></progress>
+        <span id="calories-count">0</span>/3000
+      </div>
+
+      <div class="progress">
+        <label>Workout Duration</label>
+        <progress id="duration-bar" max="120" value="0"></progress>
+        <span id="duration-count">0</span>/120 mins
+      </div>
+    </div>
+
+    <h2>📅 Weekly Log</h2>
+    <ul id="log-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
