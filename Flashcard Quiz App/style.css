@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.3s ease;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #1e1e2f, #2e2e3e);
+  color: #eee;
+}
+
+body.dark .app-container {
+  background: #2b2b3c;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .modal-content {
+  background: #3a3a4d;
+  color: white;
+}
+
+.app-container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  perspective: 1000px;
+}
+
+#dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Flashcard Flip Structure */
+.flashcard {
+  width: 100%;
+  height: 160px;
+  margin: 2rem 0 1rem;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flashcard.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+.card-front {
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  color: #636e72;
+}
+
+/* Buttons */
+button {
+  padding: 0.6rem 1.3rem;
+  margin: 0.4rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+#toggle-answer { background-color: #00b894; color: #fff; }
+#prev-btn, #next-btn { background-color: #0984e3; color: #fff; }
+#add-btn { background-color: #6c5ce7; color: #fff; }
+#edit-btn { background-color: #fdcb6e; color: #000; }
+#delete-btn { background-color: #d63031; color: #fff; }
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 350px;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 0.7rem;
+  margin: 0.6rem 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.modal-buttons {
+  margin-top: 1rem;
+}
+
+.modal-buttons button {
+  margin: 0.3rem;
+}
+
+.hidden {
+  display: none;
+}
